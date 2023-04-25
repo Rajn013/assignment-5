@@ -1,0 +1,100 @@
+que  1. What does an empty dictionary's code look like?
+
+ans.   my_dict = {}
+
+que  2. What is the value of a dictionary value with the key 'foo' and the value 42?
+
+
+ans {'foo': 42}
+
+    my_dict = {'foo': 42}
+    value = my_dict['foo']
+    print(value)
+
+
+    output 42
+
+que  3. What is the most significant distinction between a dictionary and a list?
+
+ans   Creating a dictionary
+      my_dict = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+
+       Accessing a value in a dictionary using its key
+       value = my_dict['key2']
+       print(value) # output: 'value2'
+
+       Creating a list
+       my_list = ['value1', 'value2', 'value3']
+    
+       Accessing an element in a list using its index
+       value = my_list[1]
+       print(value) # output: 'value2'
+
+
+que 4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+
+
+ans          spam = {'bar': 100}
+             value = spam['foo'] # Raises KeyError: 'foo' not in spam
+
+
+que 5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.keys()?
+
+ans .  Create a dictionary
+        spam = {'cat': 1, 'dog': 2, 'bird': 3}
+
+       Check if the key 'cat' is present in the dictionary using 'in'
+        if 'cat' in spam:
+        print('The key "cat" is present in the dictionary')
+
+       Check if the key 'cat' is present in the dictionary using 'keys()'
+        if 'cat' in spam.keys():
+        print('The key "cat" is present in the dictionary')
+
+
+        The key "cat" is present in the dictionary
+
+que 6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.values()?
+
+ans    Create a dictionary
+        spam = {'cat': 1, 'dog': 2, 'bird': 3}
+
+       Check if the key 'cat' is present in the dictionary using 'in'
+        if 'cat' in spam:
+        print('The key "cat" is present in the dictionary')
+
+       Check if the key 'cat' is present in the dictionary using 'keys()'
+        if 'cat' in spam.keys():
+        print('The key "cat" is present in the dictionary')
+
+
+         the first expression will evaluate to True because 'cat' is a key in the dictionary spam. The second expression will evaluate to False because 'cat' is not a value in the dictionary spam.
+
+que.7 What is a shortcut for the following code?
+      if 'color' not in spam:
+      spam['color'] = 'black'
+
+ans      if 'color' not in spam:
+          spam['color'] = 'black'
+
+         spam.setdefault('color', 'black')
+
+que 8. How do you "pretty print" dictionary values using which module and function?
+
+ans   import pprint
+
+       
+      my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+     Use pprint to pretty-print 
+     pprint.pprint(my_dict)
+
+
+      output
+
+      {'age': 30, 'city': 'New York', 'name': 'John'}
+
+
+
+
+
